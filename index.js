@@ -5,6 +5,9 @@ const app = express();
 
 app.use(cors());
 
+app.get('/', function(req, res){
+  res.send('<h1>Welcome from TorreTech proxy server!</h1>');
+});
 app.get('/user/:username', async (req, res) => {
   const { username } = req.params;
   const response = await fetch(`https://torre.bio/api/bios/${username}`);

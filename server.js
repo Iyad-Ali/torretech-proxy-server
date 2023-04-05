@@ -12,6 +12,7 @@ app.get('/user/:username', async (req, res) => {
   res.json(data);
 });
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3000
+app.listen(port, () => {
   console.log('Server listening on port 3000');
 });
